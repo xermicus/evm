@@ -36,6 +36,15 @@ where
 		self.position
 	}
 
+	pub fn new_valid(machine: Machine<ES::State>, etable: &'etable ES, valids: Valids) -> Self {
+		Self {
+			machine,
+			valids,
+			position: 0,
+			etable,
+		}
+	}
+
 	pub fn new(machine: Machine<ES::State>, etable: &'etable ES) -> Self {
 		let valids = Valids::new(&machine.code[..]);
 

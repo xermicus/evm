@@ -34,6 +34,7 @@ use alloc::rc::Rc;
 use alloc::vec::Vec;
 
 /// Core execution layer for EVM.
+#[derive(Clone)]
 pub struct Machine<S> {
 	/// Program data.
 	data: Rc<Vec<u8>>,
